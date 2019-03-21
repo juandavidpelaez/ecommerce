@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>E-commerce</title>
+    <meta charset="utf-8">
+    
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+
+  </head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mNavbar" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">E-commerce</a>
+        </div>
+    
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="mNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Trolley</a></li>
+            <li><a href="#">Exit</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-->
+    </nav><!-- /.navbar --> 
+
+    <div class="container">
+      <!-- left panel -->
+      <div class="col-md-3 col-sm-12 col-xs-12 sidebar">
+        <!-- search toy -->
+        <div class="row">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search for...">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button" id="search-button"><span class="glyphicon glyphicon-search"></span></button>
+            </span>
+          </div><!-- /input-group --> 
+        </div><!-- /search toy -->
+        
+        <!-- categories sidebar -->
+        <div class="row hidden-sm hidden-xs">
+          <h3>Categorias</h3>
+          <ul class="nav nav-pills nav-stacked">
+            <li class="active"><a data-toggle="pill" href="#all" data-filter="filter">All <span class="badge"></span></a></li>
+            <li><a data-toggle="pill" href="#hipster" data-filter="hipster">Hipster <span class="badge"></span></a></li>
+            <li><a data-toggle="pill" href="#college" data-filter="college">College <span class="badge"></span></a></li>
+            <li><a data-toggle="pill" href="#fit" data-filter="fit">Fit <span class="badge"></span></a></li>
+            <li><a data-toggle="pill" href="#sport" data-filter="sport">Sport <span class="badge"></span></a></li>
+          </ul>
+        </div><!--/categories navside-->
+      </div><!--/left panel-->
+
+      <!-- right panel -->
+      <div class="col-md-9 col-md-offset-3 col-sm-12 col-xs-12 main">
+        <!-- carousel -->
+        <div class="row">
+          <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+              <div class="item active">
+                <img src="https://s3.amazonaws.com/makeitreal/projects/e-commerce/banner-slider-1.jpg" alt="Artist" style="width:100%;">
+              </div>
+            
+              <div class="item">
+                <img src="https://s3.amazonaws.com/makeitreal/projects/e-commerce/banner-slider-2.jpg" alt="Adipisicin" style="width:100%;">
+              </div>
+                
+              <div class="item">
+                <img src="https://s3.amazonaws.com/makeitreal/projects/e-commerce/banner-slider-3.jpg" alt="Summer" style="width:100%;">
+              </div>
+            </div>
+            
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div><!--/carousel-->
+        
+        <!-- products display -->
+        <div class="row product-row">
+          <div class="col-sm-4 col-xs-6 filter hipster college">
+            <img src="https://s3.amazonaws.com/makeitreal/projects/e-commerce/camiseta-1.jpg" alt="hipster college">
+            <h3>Hipster Ultimate</h3>
+            <p>the hipster ideal shirt</p>
+            <button type="button" class="btn btn-primary">$60 <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></button>
+            <button type="button" class="btn btn-default">Details</button>
+          </div>
+          <div class="col-sm-4 col-xs-6 filter fit sport">
+            <img src="https://s3.amazonaws.com/makeitreal/projects/e-commerce/camiseta-2.jpg" alt="fit sport">
+            <h3>On Motion Live</h3>
+            <p>Perfect for hiking</p>
+            <button type="button" class="btn btn-primary">$60 <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></button>
+            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal"  >Details</button>
+          </div>
+          <div class="col-sm-4 col-xs-6 filter hipster fit">
+            <img src="https://s3.amazonaws.com/makeitreal/projects/e-commerce/camiseta-3.jpg" alt="hipster fit">
+            <h3>Underground Max</h3>
+            <p>For underground lovers</p>
+            <button type="button" class="btn btn-primary">$60 <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></button>
+            <button type="button" class="btn btn-default">Details</button>
+          </div>
+          <div class="col-sm-4 col-xs-6 filter college">
+            <img src="https://s3.amazonaws.com/makeitreal/projects/e-commerce/camiseta-4.jpg" alt="college">
+            <h3>Santo Domingo Tigers</h3>
+            <p>Honoring this great team</p>
+            <button type="button" class="btn btn-primary">$60 <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></button>
+            <button type="button" class="btn btn-default">Details</button>
+          </div> 
+          <div class="col-sm-4 col-xs-6 filter fit college ">
+            <img src="https://s3.amazonaws.com/makeitreal/projects/e-commerce/camiseta-5.jpg" alt="fit college">
+            <h3>Another random t-shirt</h3>
+            <p>A cool t-shirt</p>
+            <button type="button" class="btn btn-primary">$60 <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></button>
+            <button type="button" class="btn btn-default">Details</button>
+          </div>
+        </div><!--/products display-->
+      </div><!--/right panel -->  
+    </div> <!--end content-->
+
+    <!-- modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Modal with Dynamic Content</h4>
+          </div>
+          <div class="modal-body">
+            <div class="alert alert-info">
+                <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> Run out of stock
+            </div>
+                
+  
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Comprar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
