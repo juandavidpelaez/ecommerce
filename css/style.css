@@ -2,7 +2,6 @@
 
 body{
   font-size: 16px;
-  min-height: 2000px;
   padding-top: 76.8px;
 }
 
@@ -105,11 +104,50 @@ body{
   product gallery
 ################################################
 */
+.product-row{
+  padding-bottom: 80px;
+}
 .product-row div{
-  padding-top: 20px;
+  padding-top: 30px; 
 }
 .product-row div img{
   width: 100%;
   height: auto;
 }
 
+/*
+################################################
+  modal
+################################################
+*/
+#myModal .modal-body .col-sm-6 {
+  padding-bottom: 15px;
+}
+
+#myModal .modal-body img {
+  padding: 0 auto;
+  max-width: 350px;
+  width: 100%;
+}
+  
+#myModal .modal-body .wishlist {
+  padding-top: 15px;
+}
+
+#myModal .modal-body .tablist-wrap {
+  padding: 10px 0 25px;
+}
+.panel-content {
+  padding: 10px 15px;
+}
+#description {
+  padding: 10px 15px;
+}
+
+#myModal .modal-body .tablist-wrap textarea {
+  width: 100%;
+}
+
+#myModal .modal-body .modal-footer {
+  padding-bottom: 0px;
+}

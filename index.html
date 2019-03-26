@@ -65,13 +65,13 @@
         <div class="row hidden-sm hidden-xs">
           <h3>Categorias</h3>
           <ul class="nav nav-pills nav-stacked">
-            <li class="active"><a data-toggle="pill" href="#all" data-filter="filter">All <span class="badge"></span></a></li>
+            <li class="active"><a data-toggle="pill" href="#all" class="all" data-filter="filter">All <span class="badge"></span></a></li>
             <li><a data-toggle="pill" href="#hipster" data-filter="hipster">Hipster <span class="badge"></span></a></li>
             <li><a data-toggle="pill" href="#college" data-filter="college">College <span class="badge"></span></a></li>
             <li><a data-toggle="pill" href="#fit" data-filter="fit">Fit <span class="badge"></span></a></li>
             <li><a data-toggle="pill" href="#sport" data-filter="sport">Sport <span class="badge"></span></a></li>
           </ul>
-        </div><!--/categories navside-->
+        </div><!--/categories sidebar-->
       </div><!--/left panel-->
 
       <!-- right panel -->
@@ -120,7 +120,7 @@
             <h3>Hipster Ultimate</h3>
             <p>the hipster ideal shirt</p>
             <button type="button" class="btn btn-primary">$60 <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></button>
-            <button type="button" class="btn btn-default">Details</button>
+            <button type="button" class="btn btn-default modal-button" data-toggle="modal" data-target="#myModal">Details</button>
           </div>
           
           <div class="col-sm-4 col-xs-6 filter fit sport">
@@ -128,7 +128,7 @@
             <h3>On Motion Live</h3>
             <p>Perfect for hiking</p>
             <button type="button" class="btn btn-primary">$60 <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></button>
-            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal"  >Details</button>
+            <button type="button" class="btn btn-default modal-button" data-toggle="modal" data-target="#myModal">Details</button>
           </div>
           <div class="clearfix visible-xs-block"></div>
 
@@ -137,7 +137,7 @@
             <h3>Underground Max</h3>
             <p>For underground lovers</p>
             <button type="button" class="btn btn-primary">$60 <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></button>
-            <button type="button" class="btn btn-default">Details</button>
+            <button type="button" class="btn btn-default modal-button" data-toggle="modal" data-target="#myModal">Details</button>
           </div>
           <div class="clearfix visible-md-block"></div>
 
@@ -146,7 +146,7 @@
             <h3>Santo Domingo Tigers</h3>
             <p>Honoring this great team</p>
             <button type="button" class="btn btn-primary">$60 <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></button>
-            <button type="button" class="btn btn-default">Details</button>
+            <button type="button" class="btn btn-default modal-button" data-toggle="modal" data-target="#myModal">Details</button>
           </div> 
           <div class="clearfix visible-xs-block"></div>
           <div class="col-sm-4 col-xs-6 filter fit college ">
@@ -154,34 +154,73 @@
             <h3>Another random t-shirt</h3>
             <p>A cool t-shirt</p>
             <button type="button" class="btn btn-primary">$60 <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></button>
-            <button type="button" class="btn btn-default">Details</button>
+            <button type="button" class="btn btn-default modal-button" data-toggle="modal" data-target="#myModal">Details</button>
           </div>
         </div><!--/product gallery-->
       </div><!--/right panel -->  
     </div> <!--end content-->
-
-    <!-- modal -->
-    <div class="modal fade" id="myModal" role="dialog">
-      <div class="modal-dialog">
-        <!-- Modal content-->
+  
+    <!--modal-->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <!-- modal content-->
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Modal with Dynamic Content</h4>
+            <h4 class="modal-title"></h4>
           </div>
+
           <div class="modal-body">
-            <div class="alert alert-info">
+            <div class="col-sm-12">
+              <div class="alert alert-info row" role="alert">
                 <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> Run out of stock
+              </div>
+       
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="img-wraper">
+                    <img src="https://s3.amazonaws.com/makeitreal/projects/e-commerce/camiseta-2.jpg" alt="fit sport">
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <p>Price <strong>$60</strong></p>
+                  <p>Score <span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty  "></span></p>
+                  <span class="label label-info" class-label="sport"></span>
+                  <span class="label label-warning" class-label="college"></span>
+                  <span class="label label-danger" class-label="hipster"></span>
+                  <span class="label label-success" class-label="fit"></span>
+                  <div class="wishlist">
+                    <a href=""><span class="glyphicon glyphicon-heart"></span> Add to whishlist</a>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="row tablist-wrap">
+                <ul class="nav nav-tabs" role="tablist">
+                  <li class="active"><a data-toggle="tab" href="#review">Reviews</a></li>
+                  <li><a data-toggle="tab" href="#description">Description</a></li>
+                </ul>
+                <div class="tab-content">
+                  <div id="review" class="tab-pane fade in active">
+          
+                    <div class="panel panel-default">
+                      <div class="panel-heading">User X</div>
+                      <div class="panel-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                    </div>
+                    <textarea rows="4" cols="60"></textarea>
+                  </div>
+                  <div id="description" class="tab-pane fade"></div>
+                </div>
+              </div>  
+            </div>    
+          
+            <div class="modal-footer row">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Buy</button>
             </div>
-                
-  
           </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Comprar</button>
-          </div>
-        </div>
+        </div><!--/modal content-->
       </div>
-    </div>
+    </div><!--/modal-->
   </body>
 </html>
